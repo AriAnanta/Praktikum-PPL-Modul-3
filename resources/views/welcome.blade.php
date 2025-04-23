@@ -85,7 +85,7 @@
                                     <h2 class="text-xl font-semibold text-black dark:text-white">Modul 3</h2>
 
                                     <p class="mt-2 text-sm/relaxed">
-                                        Praktikum PPL
+                                        Praktikum PPL Laravel
                                     </p>
                                 </div>
                             </a>
@@ -93,7 +93,7 @@
                     </main>
 
                     <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-                        Enterprise Application Development
+                        Enterprise Application Development started
                     </footer>
                 </div>
             </div>
