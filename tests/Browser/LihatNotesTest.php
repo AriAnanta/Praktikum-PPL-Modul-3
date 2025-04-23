@@ -6,13 +6,12 @@ use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class HapusNotesTes extends DuskTestCase
+class LihatNotesTest extends DuskTestCase
 {
     /**
      * A Dusk test example.
-     * @group notes
      */
-    public function testHapusNotes(): void
+    public function testExample(): void
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/')
@@ -22,8 +21,8 @@ class HapusNotesTes extends DuskTestCase
                 ->type('password', 'password') // Command untuk mengisi field 'password' dengan nilai 'password'
                 ->press('LOG IN') // Command untuk mengklik tombol yang bertuliskan "LOG IN"
                 ->assertSee('Dashboard')// Command untuk memverifikasi bahwa text "Dashboard" muncul di halaman setelah login berhasil
-                ->clickLink('Notes') // Command untuk mengklik link yang bertuliskan "Notes"
-            ->press('Delete');// Mengklik tombol "Delete"
+                ->clickLink('Notes'); // Command untuk mengklik link yang bertuliskan "Notes"
+                
         });
     }
 }

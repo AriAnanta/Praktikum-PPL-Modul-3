@@ -15,12 +15,13 @@ class masuktest extends DuskTestCase
     public function testExample(): void
     {
         $this->browse(function (Browser $browser) {
-            $browser -> visit('/')
-                -> clickLink('Log in')
-                -> type ('email', 'admin@gmail.com')
-                -> type ('password', 'password')
-                -> press('LOG IN')
-                ->assertPathIs('/dashboard');
+            $browser->visit('/')
+                ->assertSee('Enterprise Application Development') //Command untuk memverifikasi bahwa text "Enterprise Application Development" muncul di halaman
+                ->clickLink('Log in') //Command untuk mengklik link yang bertuliskan "Log in"
+                ->type('email', 'admin@gmail.com')//Command untuk mengisi field 'email' dengan nilai admin@gmail.com
+                ->type('password', 'password')//Command untuk mengisi field 'password' dengan nilai 'password'
+                ->press('LOG IN') //Command untuk mengklik tombol yang bertuliskan "LOG IN"          
+                ->assertSee('Dashboard');//Command untuk memverifikasi bahwa text "Dashboard" muncul di halaman setelah login berhasil
         });
     }
 }
